@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
 NAME=libft.a
-SRC= srcs/ft_strlen.c srcs/ft_strchr.c
+SRC= srcs/ft_strlen.c srcs/ft_strchr.c srcs/ft_strcpy.c
 OBJ= $(SRC:.c=.o)
 
 all: $(NAME)
@@ -14,6 +14,9 @@ ft_strlen.o:  ft_strlen.c
 
 ft_strchr.o:  ft_strchr.c
 	$(CC) $(CFLAGS) -c ft_strchr.c
+
+ft_strcpy.o:  ft_strcpy.c
+	$(CC) $(CFLAGS) -c ft_strcpy.c
 
 clean:
 	rm -f $(OBJ)
