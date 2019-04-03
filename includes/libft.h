@@ -8,5 +8,5 @@
 size_t ft_strlen(char *s);
 char *ft_strchr(char *str, int c);
 char *ft_strcpy(char *dest, char *src);
-
+int ft_strcmp(const char *str1, const char *str2);
 #endif
