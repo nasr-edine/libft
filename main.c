@@ -2,35 +2,14 @@
 
 int main(int argc, char *argv[])
 {
-   char str1[15];
-   char str2[15];
-   int ret;
+    char c = 'v';
+    char *s = NULL;
+    
+    printf("[%s]\n", ft_strrchr("\0azerty\0", c));
+    printf("[%p]\n\n", ft_strrchr("\0azerty\0", c));
 
-
-   strcpy(str1, "a\203");
-    strcpy(str2, "a\003");
-//printf("%s\n", str1);
-   ret = strcmp(str1, str2);
-printf("%d\n", ret);
-   if(ret < 0) {
-      printf("str1 is less than str2");
-   } else if(ret > 0) {
-      printf("str2 is less than str1");
-   } else {
-      printf("str1 is equal to str2");
-   }
-
-    ret = ft_strcmp(str1, str2);
-printf("\n%d\n", ret);
-
-printf("\n");
-   if(ret < 0) {
-      printf("str1 is less than str2");
-   } else if(ret > 0) {
-      printf("str2 is less than str1");
-   } else {
-      printf("str1 is equal to str2");
-   }
+    printf("[%s]\n", strrchr("\0azerty\0", c));
+    printf("[%p]\n", strrchr("\0azerty\0", c));
 
     return(0);
 }

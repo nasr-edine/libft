@@ -7,6 +7,7 @@
 
 size_t ft_strlen(char *s);
 char *ft_strchr(const char *str, int c);
+char * ft_strrchr(const char *s, int c);
 char *ft_strcpy(char *dest, char *src);
 int ft_strcmp(const char *str1, const char *str2);
 #endif
