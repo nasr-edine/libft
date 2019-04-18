@@ -2,14 +2,15 @@
 
 int main(int argc, char *argv[])
 {
-    char c = 'v';
-    char *s = NULL;
-    
-    printf("[%s]\n", ft_strrchr("\0azerty\0", c));
-    printf("[%p]\n\n", ft_strrchr("\0azerty\0", c));
+    int c = 'p';
+    char *s ="azertyp";
+    size_t n = strlen(s);
 
-    printf("[%s]\n", strrchr("\0azerty\0", c));
-    printf("[%p]\n", strrchr("\0azerty\0", c));
+    printf("[%s]\n", (char *)ft_memchr((void *)s, c, n));
+    printf("[%p]\n\n", ft_memchr((void *)s, c, n));
+
+    printf("[%s]\n", (char *)memchr((void *)s, c, n));
+    printf("[%p]\n", memchr((void *)s, c, n));
 
     return(0);
 }
