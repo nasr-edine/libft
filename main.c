@@ -2,9 +2,9 @@
 
 int main(int argc, char *argv[])
 {
-        int n = 0;
-        char *s1 = "";
-        char *s2 = "";
+        int n = 4;
+        char *s1 = "ab\0cd";
+        char *s2 = "abc";
         printf("%d\n", strncmp(s1, s2, n));
         printf("%d\n\n", ft_strncmp(s1, s2, n));
 
