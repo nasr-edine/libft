@@ -6,6 +6,8 @@
 #include <stdlib.h> // malloc
 
 size_t ft_strlen(const char *s);
+size_t ft_strnlen(const char *s, size_t maxlen);
+
 char *ft_strchr(const char *str, int c);
 char * ft_strrchr(const char *s, int c);
 void * ft_memchr(const void *s, int c, size_t n);
