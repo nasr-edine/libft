@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
 NAME=libft.a
-SRC= srcs/ft_strlen.c srcs/ft_strnlen.c srcs/ft_strchr.c srcs/ft_strrchr.c  srcs/ft_memchr.c srcs/ft_strcpy.c srcs/ft_strcmp.c srcs/ft_memcpy.c srcs/ft_memccpy.c
+SRC= srcs/ft_strlen.c srcs/ft_strnlen.c srcs/ft_strchr.c srcs/ft_strrchr.c  srcs/ft_memchr.c srcs/ft_strcpy.c srcs/ft_strcmp.c  srcs/ft_strncmp.c srcs/ft_memcpy.c srcs/ft_memccpy.c
 OBJ= $(SRC:.c=.o)
 
 all: $(NAME)
@@ -36,6 +36,9 @@ ft_strcpy.o:  ft_strcpy.c
 ft_strcmp.o:  ft_strcmp.c
 	@$(CC) $(CFLAGS) -c ft_strcmp.c
 
+ft_strncmp.o:  ft_strncmp.c
+	@$(CC) $(CFLAGS) -c ft_strncmp.c
+	
 clean:
 	@rm -f $(OBJ)
 
