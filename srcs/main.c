@@ -1,6 +1,4 @@
-#include <stdio.h>
-
-size_t ft_strlen(const char *s);
+#include "header.h"
 
 int main(int argc, char const *argv[])
 {
