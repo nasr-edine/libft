@@ -1,5 +1,6 @@
 #include "includes/libft.h"
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -24,9 +25,9 @@ int main()
 //   ft_memmove (strb,strb+5,n);
 //   puts (strb);
 
-   char csrc[100] = "Geeksfor"; 
-   ft_memmove(csrc+5, csrc, strlen(csrc)+1); 
-   printf("%s", csrc); 
+//    char csrc[100] = "Geeksfor"; 
+//    ft_memmove(csrc+5, csrc, strlen(csrc)+1); 
+//    printf("%s", csrc); 
 
 //    char str[] = "memmove can be very useful......";
 //   memmove (str+20,str+15,11);
@@ -99,6 +100,56 @@ int main()
 //   ft_memmove (b,a,3);
 //   puts (a);
 //   puts (b);
+char* msg = "This is the string: not copied";
+
+    // char buffer[80];
+
+    // memset( buffer, '\0', 80 );
+    // memccpy( buffer, msg, ':', 80 );
+
+    // printf( "%s\n", buffer );
+
+
+    // char buffer2[80];
+
+    // memset( buffer2, '\0', 80 );
+    // memccpy( buffer2, msg, ':', 80 );
+
+    // printf( "%s\n", buffer2 );
+
+	// 		char	src[] = "test basic du memccpy !";
+	// 		char	buff1[22];
+	// 		char	buff2[22];
+
+	// 		memset(buff1, 0, sizeof(buff1));
+
+	// 		char	*r1 = memccpy(buff1, src, 'd', 22);
+	// 		char	*r2 = ft_memccpy(buff2, src, 'd', 22);
+    
+    // printf( "%s\n", r1-5 );
+    // printf( "%s\n", r2-5 );
+
+    //     printf( "%s\n", buff1 );
+    // printf( "%s\n", buff2 );
+
+    //     printf( "%d\n", r1[0] );
+    // printf( "%d\n", r2[0] );
+
+    // printf( "%d\n", '\0' );
+
+
+			char	buff1[] = "abcdefghijklmnopqrstuvwxyz";
+			char	buff2[] = "abcdefghijklmnopqrstuvwxyz";
+			char	*src =    "string with\200inside !";
+
+			char	*r1 = memccpy(buff1, src, '\200', 21);
+			char	*r2 = ft_memccpy(buff2, src, '\200', 21);
+
+
+        printf( "%s\n", buff1 );
+    printf( "%s\n", buff2 );
+    printf( "%s\n", r1);
+    printf( "%s\n", r2);
     return 0;
 }
 
