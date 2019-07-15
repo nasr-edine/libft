@@ -4,11 +4,14 @@
 
 int main()
 {
-    char source[] = "GeeksForGeeks"; 
-  
+    char *s;
 
-    ft_bzero( source, 5 );
-    puts(source);
+    // s= ft_strcpy(s, "toto");
+    // s= ft_strcpy(s, NULL);
+    // s= strcpy(NULL, NULL);
+    s= ft_strcpy(NULL, NULL);
+
+    printf("%s\n", s);
     return 0;
 }
 
