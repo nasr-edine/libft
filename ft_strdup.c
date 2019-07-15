@@ -3,20 +3,13 @@
 char *ft_strdup(const char *s1)
 {
     char *copy;
-    int i;
-    int length;
+    size_t len;
 
-    length = ft_strlen(s1);
-    copy = (char *)malloc(sizeof(char) * (length+1));
+    len = ft_strlen(s1);
+    copy = (char *)malloc(sizeof(char) * (len+1));
     if (copy == NULL) 
         return NULL;
-    i = 0;
-    while(i < length)
-    {
-        copy[i] = s1[i];
-        i++;
-    }
-    copy[i] = 0;
+    copy[len] = 0;
+    ft_memcpy(copy, s1, len);
     return copy;
 }
-

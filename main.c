@@ -4,17 +4,11 @@
 
 int main()
 {
+    char source[] = "GeeksForGeeks"; 
+  
 
-    char source[] = "GeeksFor\0Geeks"; 
-  
-    // 5 bytes of source are copied to a new memory 
-    // allocated dynamically and pointer to copied 
-    // memory is returned. 
-    char* target = ft_strndup(source, 8); 
-    char* target2 = ft_strndup(source, 8); 
-  
-    printf("%s\n", target);
-    printf("%s\n", target2);
+    ft_bzero( source, 5 );
+    puts(source);
     return 0;
 }
 
