@@ -2,8 +2,7 @@
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
  {
-//     puts(dst);
-//     puts(src);
+
 
     size_t i = 0;
     size_t len = dstsize;    
@@ -16,8 +15,9 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
     if (dstsize <= strlen(src)) 
         len = dstsize -1;
     
-    while(i < len )
+    while(i < len   && src[i] != 0)
     {
+        puts("test");
         dst[i] = src[i];
         i++;
     }    

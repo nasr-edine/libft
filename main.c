@@ -8,7 +8,6 @@
 int
 main(int argc, char **argv)
 {
-	char buf[1];
 
 	// /* Test copy to 0-sized buffer . */
 	// memset(buf, 0, sizeof(buf));
@@ -21,19 +20,22 @@ main(int argc, char **argv)
 	// ft_strlcpy(buf, "xyzaa", 0);
 	// assert(strcmp(buf, "xyzaa") == 0);
 
-	/* Test copy to 0-sized buffer . */
-	memset(buf, 0, sizeof(buf));
-	assert(strlcpy(buf, "xyzaaa", 6) == 6);
-    printf("buf: [%s]\n", buf);
-	assert(strcmp(buf, "xyza") == 0);
-	char bufa[5];
+	// char bufa[10];
 
 
 	// /* Test copy to 0-sized buffer . */
 	// memset(bufa, 0, sizeof(bufa));
-	// assert(ft_strlcpy(bufa, "x", 6) == 6);
+	// assert(strlcpy(bufa, "xxxxx", 6) == 5);
     // printf("buf: [%s]\n", bufa);
-	// assert(strcmp(bufa, "xyza") == 0);
+	// assert(strcmp(bufa, "xxxxx") == 0);
+	char bufa[10];
+
+
+	/* Test copy to 0-sized buffer . */
+	memset(bufa, 0, sizeof(bufa));
+	assert(ft_strlcpy(bufa, "xx", 6) == 2);
+    printf("buf: [%s]\n", bufa);
+	assert(strcmp(bufa, "xx") == 0);
 
 
 	// /* Test normal copy. */
