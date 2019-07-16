@@ -8,18 +8,32 @@
 int
 main(int argc, char **argv)
 {
-	char buf[2];
+	char buf[1];
 
 	// /* Test copy to 0-sized buffer . */
 	// memset(buf, 0, sizeof(buf));
 	// assert(strlcpy(buf, "xyzaa", 5) == 3);
 	// assert(strcmp(buf, "xyzaa") == 0);
 
+	// /* Test copy to 0-sized buffer . */
+	// memset(buf, 0, sizeof(buf));
+	// // assert(ft_strlcpy(buf, "xyzaa", 5) == 3);
+	// ft_strlcpy(buf, "xyzaa", 0);
+	// assert(strcmp(buf, "xyzaa") == 0);
+
 	/* Test copy to 0-sized buffer . */
 	memset(buf, 0, sizeof(buf));
-	// assert(ft_strlcpy(buf, "xyzaa", 5) == 3);
-	ft_strlcpy(buf, "xyzaa", 5);
-	assert(strcmp(buf, "xyzaa") == 0);
+	assert(strlcpy(buf, "xyzaaa", 6) == 6);
+    printf("buf: [%s]\n", buf);
+	assert(strcmp(buf, "xyza") == 0);
+	char bufa[5];
+
+
+	// /* Test copy to 0-sized buffer . */
+	// memset(bufa, 0, sizeof(bufa));
+	// assert(ft_strlcpy(bufa, "x", 6) == 6);
+    // printf("buf: [%s]\n", bufa);
+	// assert(strcmp(bufa, "xyza") == 0);
 
 
 	// /* Test normal copy. */
