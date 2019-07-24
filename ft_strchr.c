@@ -2,16 +2,11 @@
 
 char *ft_strchr(const char *s, int c)
 {
-    char *ptr;
-    ptr = (char *)s;
-
-    while(*ptr != '\0')
+    while(*s != (char)c)
     {                   
-        if (*ptr == c) 
-            return ptr;
-        ptr++;
+        if (*s == 0) 
+            return 0;
+        s++;
     }
-    if (c == '\0') 
-        return ptr;
-    return NULL;
+    return (char *)s;
 }
