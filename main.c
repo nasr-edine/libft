@@ -8,34 +8,18 @@
 int
 main(int argc, char **argv)
 {
-	// char *t;
-	char *u;
-
-
-	// t = ft_strstr("123", "");
-	// u = strstr("",  "");
-
-
-			char	*s1 = "MZIRIBMZIRIBMZP";
-			char	*s2 = "MZIRIBMZP";
-
-			// char	*i1 = strstr(s1, s2);
-			// char	*i2 = ft_strstr(s1, s2);			
-			char *t = "";
-			char	*i1 = strstr(t, "");
-			char	*i2 = ft_strstr("", "");
+	char *s1 = "AAAAAAAAAAAAA";
+	size_t max = strlen(s1);
+	char *i1 = strnstr(s1, s1, max);
+	char *i2 = ft_strnstr(s1, s1, max);
 			if (i1 == i2)
-				puts("ok");
-			else
-			puts("ko");
-
-
-
+				puts("TEST_SUCCESS");
+	
 
 	puts(i1);
 	puts(i2);
 
-	printf("%p\n", t);
-	printf("%p\n", i1);
+	// printf("%p\n", t);
+	// printf("%p\n", i1);
     return 0;
 }
