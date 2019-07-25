@@ -17,10 +17,12 @@ main(int argc, char **argv)
    strcpy(str1, "hello");
 
    //Assigning the value to the string str2
-   strcpy(str2, "hEllo");
+   strcpy(str2, "helLO WORLD");
 
-   result = strcmp(str1, str2);
-   resul = ft_strcmp(str1, str2);
+   //This will compare the first 3 characters
+   result = strncmp(str1, str2, 4);
+   resul = strncmp(str1, str2, 4);
+
 
 printf("%d\n", result);
 printf("%d\n", resul);
