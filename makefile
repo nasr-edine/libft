@@ -12,7 +12,8 @@ SRC = 	ft_strlen.c ft_strnlen.c \
 		ft_strrchr.c ft_strstr.c \
 		ft_strnstr.c ft_strcmp.c \
 		ft_strncmp.c ft_toupper.c \
-		ft_tolower.c ft_isalpha.c
+		ft_tolower.c ft_isalpha.c \
+		ft_isdigit.c ft_isalnum.c
 OBJ= $(SRC:.c=.o)
 FLAGS=-Wall -Wextra -Werror
 

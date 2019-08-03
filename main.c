@@ -10,44 +10,18 @@ int
 main(int argc, char **argv)
 {
     int a;
-    // putchar(a);
-        // putc(a, stdout);
-        printf("%d\n", a);
-
-puts("");
     int b;
-    // putchar(b);
-    // putc(b, stdout);
-    
 
- 
-  
-  
-    int i = 0;
-    int c = -32768;
+    int c = -128;
 
-    while(i < 32767)
+    while(c < 127)
     {
-        a = isalpha(c);
-        b = ft_isalpha(c);
+        a = isalnum(c);
+        b = ft_isalnum(c);
         assert(a == b);
         printf("[%c %d %d]\n", c, a, b);
         c++;
-        i++;
     }
 
-    // i = 0;
-    // c = 65;
-
-    // while(i < 100)
-    // {
-    //     a = isalpha(c);
-    //     b = ft_isalpha(c);
-    //     assert(a == b);
-    //     printf("[%c %d %d]\n", c, a, b);
-    //     c++;
-    //     i++;
-    // }
-  
     return 0;
 }
