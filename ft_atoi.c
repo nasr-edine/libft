@@ -6,21 +6,29 @@ int ft_atoi(const char *str)
 
     size_t i;
     int c;
+    int dec = 1;
+    int nbr;
 
     i = 0;
-    while(i < strlen(str))
+    nbr = 0;
+    size_t len = strlen(str);
+    
+    while(i < len - 1)
     {
-        // puts("character:");
-        // putchar(str[i]);
-        // printf("character: %c\n", str[i]);
-        // printf("value decimal: %d\n", str[i]);
-
-        c = str[i] - 48;
-
-        printf("after conversion of character: %d\n", c);
+        dec *= 10;
         i++;
     }
-    
+    i = 0;
+    while(i < len)
+    {
+        c = (str[i] - 48) * dec;
+        printf("c: %d\n", c);
+        nbr += c;
+        printf("nbr: %d\n", nbr);
+        i++;
+        dec /= 10;
+    }
+    printf("nbr: %d\n", nbr);
     return 0;
 }
 // 48  0 
